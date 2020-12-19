@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div style="padding-top: 10vh;">
+        <a id="#home"></a>
+    </div>
+    {% include "includes/home.html" %}
+    <div style="padding-top: 10vh;">
+        <a id="#about"></a>
+    </div>        
+    {% include "includes/about.html" %}
+    <div style="padding-top: 10vh;">
+        <a id="#gallery"></a>
+    </div>        
+    {% include "includes/gallery.html" %}
+    <div style="padding-top: 100vh;">
+        <a id="#contact"></a>
+    </div>        
+    {% include "includes/contact.html" %}
+{% endblock %}

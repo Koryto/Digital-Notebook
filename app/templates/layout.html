@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image:type" content="image/png"/>
+        <meta property="og:image:width" content="720"/>
+        <meta property="og:image:height" content="126"/>
+        <meta property="og:image" content="https://we2050-prod.s3.us-east-2.amazonaws.com/photos/posting-img.png"/>
+        <meta property="og:title" content="Digital Notebook"/>
+        <meta property="og:description" content="A hell of a notebook for your poor kid"/>
+        <meta name="description" content="Taking education to the digital era">
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://we2050-prod.s3.us-east-2.amazonaws.com/photos/SQUARE-2050-small.ico"/>
+        <title>Digital Notebook</title> 
+    
+        <link rel="stylesheet" media="all" href="../static/css/application3.css"/>
+        <script src="../static/javascript/application.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <header>
+        <img style="position: fixed;right:1vw;margin-top: -6vh;width:12vw;" src="../static/images/logo.png" alt="logo">
+        {% include "includes/partials/navbar.html" %}
+        {# <hr style="clear:both"> #}
+    </header>
+    <body>
+        {% block content %}
+        
+        {% endblock %}
+    </body>
+</html>
