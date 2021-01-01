@@ -26,6 +26,7 @@ body {
 
 .topnav {
     position: fixed;
+    height: 5vh;
     overflow: hidden;
     background-color: #333;
   }

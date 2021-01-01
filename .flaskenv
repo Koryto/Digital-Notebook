@@ -1,2 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=app/main.py
+FLASK_APP=main.py
