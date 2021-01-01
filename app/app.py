@@ -1,23 +1,30 @@
-from flask import Flask
+from flask import Flask, request, jsonify, render_template
 
 from ..config import Config
-from flask import render_template
-
+from .user import User
+from .database import session
 
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
-#db = MongoEngine()
-#db.init_app(app)
+
 
 
 
 @app.route("/") # Root directory
-@app.route("/index")
+@app.route("/index", methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
+    if request.method == "GET":
+        return render_template("index.html")
 
-#@app.route("/login")
-#def login():
-#    return render_template("login.html")
+    if request.method == "POST":
+        input_data = request.get_json(force=True)
+        user = User(
+            email = input_data['email'],
+            city = input_data['city']
+        )
+        
+        session.add(user)
+        session.commit()
+        return render_template("index.html")
